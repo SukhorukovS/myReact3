@@ -11,6 +11,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[chunkhash].js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     rules: [
       {
@@ -30,10 +33,12 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist')
+    contentBase: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new ExtractTextPlugin({ filename: 'style.[chunkhash].css' }),
+    new ExtractTextPlugin({
+      filename: 'style.[chunkhash].css'
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
       filename: 'index.html'
