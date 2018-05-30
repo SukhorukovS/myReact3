@@ -11,14 +11,14 @@ export default class Dropdown extends PureComponent {
 
     return (
       <div>
-        <div className="nav-item dropdown">
+        <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
           </a>
-            <ul>
-              {items.map((item, idx) => <li key={idx} className="dropdown-menu" aria-labelledby="navbarDropdown"><a className="dropdown-item" href={item.link}>{item.title}</a></li>)}
-            </ul>
-        </div>
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              {items.map((item, idx) => <a key={idx} className="dropdown-item" href={item.link}>{item.title}</a>)}
+          </div>
+        </li>
       </div>
     )
   }

@@ -2,13 +2,14 @@ import './Header.scss';
 import React, { PureComponent } from 'react';
 
 import classNames from 'classnames';
-import Dropdown from '../Dropdown';
-const dropItems = [
-  { link: '#', title: 'Home' },
-  { link: '#', title: 'News' },
-  { link: '#', title: 'About' }
-]
+import Menu from '../Menu';
 
+const menuItems = [
+  { link: '#', title: 'Главная' },
+  { link: '#', title: 'Блог' },
+  { link: '#', title: 'Пользователи' },
+  { link: '#', title: 'Комментарии' }
+];
 
 export default class Header extends PureComponent {
   render () {
@@ -16,21 +17,8 @@ export default class Header extends PureComponent {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-info">
           <a className="navbar-brand" href="#">Navbar</a>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="#">Disabled</a>
-              </li>
-            </ul>
-          </div>
+          <Menu menuItems={menuItems} />
         </nav>
-        <Dropdown items={dropItems}/>
       </div>
     )
   }
