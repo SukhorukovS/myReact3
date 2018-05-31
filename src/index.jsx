@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './components/Header';
-import Post from './components/Post';
+import Posts from './components/Posts';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <Post />
+        <Posts />
         <Footer />
       </div>
     )
