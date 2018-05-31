@@ -15,7 +15,7 @@ export default class UserListContainer extends PureComponent {
 
   componentDidMount() {
     this.setState({ loading: true });
-    fetch('https://jsonplaceholder.typicode.com/comments')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) => {
         this.setState({
