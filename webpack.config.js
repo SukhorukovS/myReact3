@@ -12,7 +12,12 @@ module.exports = {
     filename: 'bundle.[chunkhash].js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      components: path.resolve(__dirname, 'src', 'components'),
+      containers: path.resolve(__dirname, 'src', 'containers'),
+      assets: path.resolve(__dirname, 'src', 'assets')
+    }
   },
   module: {
     rules: [

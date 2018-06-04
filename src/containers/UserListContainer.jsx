@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
-import UserList from '../components/Users/UserList';
-import Loading from '../components/Loading';
+import UserList from 'components/Users/UserList';
+import Loading from 'components/Loading';
 
 export default class UserListContainer extends PureComponent {
   constructor(props) {
