@@ -1,5 +1,5 @@
 import './Card.scss';
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 
 import classNames from 'classnames';
 
@@ -12,7 +12,7 @@ export default class Card extends PureComponent {
     const { content } = this.props;
 
     return (
-      <div className="row">
+      <Fragment>
         {content.map((content, idx) => <div key={idx} className="card border-primary mb-3 col-6">
           <div className="card-header">
           <a href={content.link}>{content.category}</a>
@@ -22,7 +22,7 @@ export default class Card extends PureComponent {
             <p className="card-text">{content.text}</p>
           </div>
         </div>)}
-      </div>
+      </Fragment>
     )
   }
 } 
